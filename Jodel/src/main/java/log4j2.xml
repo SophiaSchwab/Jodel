@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This is the logging configuration file for the Track+ application.
+  For user access logging configuration see WEB-INF/Logging.properties.
+  Usually, there is no need to change this.
+
+  $Id: log4j2.xml 3059 2016-09-06 21:38:49Z friedj $#
+-->
+<Configuration packages="com.aurel.track.admin.server.logging">
+    <Properties>
+        <Property name="logDir">${sys:java.io.tmpdir}/log</Property>
+    </Properties>
+    <Appenders>
+	    <Console name="STDERR" target="SYSTEM_ERR">
+	    	<filters>
+	        	<ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+	       	</filters>
+	       	<PatternLayout pattern="%d %-5p %c{2} [%L] - %m%n" />
+	       	<!--
+	        <PatternLayout pattern="%d %-5p %C{2} (%F:%L) - %m%n" />
+	        -->
+	    </Console>
+	    <Console name="STDOUT" target="SYSTEM_OUT">
+	        <filters>
+	        	<ThresholdFilter level="WARN" onMatch="DENY" onMismatch="ACCEPT"/>
+	        </filters>
+	        <PatternLayout pattern="%d %-5p %c{2} [%L] - %m%n" />
+	    </Console>
+
+    </Appenders>
+
+	<Loggers>
+
+	    <Logger name="org.glassfish.jersey.tracing" level="trace">
+	    </Logger>
+
+	    <Root level="debug">
+	        <AppenderRef ref="STDERR" />
+	        <AppenderRef ref="STDOUT" />
+	    </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,25 @@
+{
+  "name": "jodel",
+  "version": "1.0.0",
+  "description": "Post and wait for response",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "author": "Jörg Friedrich",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "jquery": "^3.1.0",
+    "react": "^15.3.1",
+    "react-bootstrap": "^0.30.3",
+    "react-button": "^1.2.1",
+    "react-dom": "^15.3.1",
+    "remarkable": "^1.6.2",
+    "webpack": "^1.13.2"
+  }
+}
