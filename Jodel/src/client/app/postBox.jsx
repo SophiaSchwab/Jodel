@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PostList from './postList.jsx';
 import PostForm from './postForm.jsx';
 
@@ -76,7 +76,7 @@ class PostBox extends React.Component {
 
     render() {
         return (
-            <div className="postBox">
+            <div className="postBox" style="border: 1px solid black;">
                 <h1>Jodel</h1>
                 <PostList data={this.state.data}/>
                 <PostForm onPostSubmit={this.handlePostSubmit.bind(this)}/>
