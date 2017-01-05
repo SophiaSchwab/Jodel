@@ -13,9 +13,10 @@ class Post extends React.Component {
         return {__html: rawMarkup};
     }
 
+	
     render() {
         var result = (
-            <div className="post">
+            <div className="post" style="background-color: orange;">
                 <h2 className="postAuthor">
                     {this.props.author}
                 </h2>
