@@ -15,8 +15,17 @@ class Post extends React.Component {
 
 	
     render() {
+    
+    	var styles = {
+ 			post: {
+   				 	border: "5px solid green",
+    				padding: 10   		
+  			},
+  			
+};
+    	
         var result = (
-            <div className="post" style="background-color: orange;">
+            <div className="post" style={styles.post}>
                 <h2 className="postAuthor">
                     {this.props.author}
                 </h2>
